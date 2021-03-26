@@ -60,3 +60,7 @@ Copy file face-api.min.js from folder dist into our project
 For face detection, we need face detection model. In the face.api.js repo, there is a model for face detecion. We copy folder name weights to our project. Change its name to models.
 
 ![Import the face detection models](https://i.imgur.com/acGjzLx.png)
+
+Import face-api.min.js to index.html file. Remember that you should put face-api.min.js before index.js because the index.html load from top to bottom.
+
+![Import face-api.min.js](https://i.imgur.com/acGjzLx.png)
