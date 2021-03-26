@@ -39,7 +39,7 @@ Get data from the browser, if the webcam does not open yet. require the user to 
 
 I load the video from webcam to the website:
 
-![Video loading](blob:https://imgur.com/2c46a718-e936-4d7c-a9eb-d21ae49aa081)
+![Video loading](https://i.imgur.com/LQP7Nls.png)
 
 You can you Live Server Extension in VsCode:
 
