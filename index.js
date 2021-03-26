@@ -19,9 +19,16 @@ video.addEventListener('playing', () => {
     const canvas = faceapi.createCanvasFromMedia(video);
     document.body.append(canvas);
 
+    const displaySize = {
+        width: video.videoWidth,
+        height: video.videoHeight
+    }
+
     setInterval(async() => {
         const detects = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions());
-        console.log('detects', detects);
+        
+        const resizeDetects = faceapi.resizeResults(detects, displaySize);
+        faceapi.draw.drawDetections(canvas, resizeDetects);
     }, 300);
 });
 

@@ -150,3 +150,29 @@ As you can see, the models can detect my face:
 
 ![Face detection](https://i.imgur.com/qIVYFqi.png)
 
+
+We draw the detected face via the canvas. 
+
+```
+video.addEventListener('playing', () => {
+    const canvas = faceapi.createCanvasFromMedia(video);
+    document.body.append(canvas);
+
+    const displaySize = {
+        width: video.videoWidth,
+        height: video.videoHeight
+    }
+
+    setInterval(async() => {
+        const detects = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions());
+        
+        const resizeDetects = faceapi.resizeResults(detects, displaySize);
+        faceapi.draw.drawDetections(canvas, resizeDetects);
+    }, 300);
+});
+```
+
+![Draw face detection](https://i.imgur.com/e2qlEs8.png)
+
+
+
