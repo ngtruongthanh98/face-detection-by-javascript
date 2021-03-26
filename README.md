@@ -12,3 +12,11 @@ Edit html file:
 Embed video from webcam to the website:
 
 ![Video](https://i.imgur.com/rzOG5n1.png)
+
+Import style.css to index.html:
+
+![Import CSS](https://i.imgur.com/YXrG9XO.png)
+
+I add the following code to style.css:
+
+![style.css](https://i.imgur.com/nNvatFM.png)
