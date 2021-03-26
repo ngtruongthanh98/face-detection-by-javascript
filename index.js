@@ -25,13 +25,17 @@ video.addEventListener('playing', () => {
     }
 
     setInterval(async() => {
-        const detects = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions());
-        
+        const detects = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+            .withFaceLandmarks()
+            .withFaceExpressions();
+
         const resizeDetects = faceapi.resizeResults(detects, displaySize);
         
         canvas.getContext('2d').clearRect(0, 0, displaySize.width, displaySize.height);
         
         faceapi.draw.drawDetections(canvas, resizeDetects);
+        faceapi.draw.drawFaceLandmarks(canvas, resizeDetects);
+        faceapi.draw.drawFaceExpressions(canvas, resizeDetects);
     }, 300);
 });
 

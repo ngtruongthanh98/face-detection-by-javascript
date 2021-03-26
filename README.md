@@ -183,5 +183,25 @@ We must clear the old canvas befor creating the new one:
 
 ![Clear canvas](https://i.imgur.com/7YL9gyQ.png)
 
+Apply Face landmard 68 and Face Expressions:
+
+![Apply models](https://i.imgur.com/gqLObjM.png)
+
+```
+    setInterval(async() => {
+        const detects = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+            .withFaceLandmarks()
+            .withFaceExpressions();
+
+        const resizeDetects = faceapi.resizeResults(detects, displaySize);
+        
+        canvas.getContext('2d').clearRect(0, 0, displaySize.width, displaySize.height);
+        
+        faceapi.draw.drawDetections(canvas, resizeDetects);
+        faceapi.draw.drawFaceLandmarks(canvas, resizeDetects);
+        faceapi.draw.drawFaceExpressions(canvas, resizeDetects);
+    }, 300);
+```
+
 
 
