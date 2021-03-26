@@ -47,5 +47,5 @@ You can you Live Server Extension in VsCode:
 
 Then, the website opened like this:
 
-![Video stream](https://i.imgur.com/pk6k5Xe.png)
+![Video stream](https://i.imgur.com/yunRge4.png)
 
