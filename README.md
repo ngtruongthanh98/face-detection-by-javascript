@@ -71,7 +71,8 @@ Come back to index.js:
 
 Create funnction getCameraStream() and put the get camera steam condition into it.
 
-```const video = document.getElementById("videoElm");
+```
+const video = document.getElementById("videoElm");
 
 function getCameraStream() {
     if (navigator.mediaDevices.getUserMedia) {
@@ -82,3 +83,4 @@ function getCameraStream() {
 }
 
 getCameraStream();
+```
