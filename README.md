@@ -63,4 +63,4 @@ For face detection, we need face detection model. In the face.api.js repo, there
 
 Import face-api.min.js to index.html file. Remember that you should put face-api.min.js before index.js because the index.html load from top to bottom.
 
-![Import face-api.min.js](https://i.imgur.com/acGjzLx.png)
+![Import face-api.min.js](https://i.imgur.com/z06X0Fu.png)
