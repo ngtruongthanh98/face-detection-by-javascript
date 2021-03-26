@@ -13,10 +13,14 @@ Embed video from webcam to the website:
 
 ![Video](https://i.imgur.com/rzOG5n1.png)
 
-Import style.css to index.html:
+Embed style.css to index.html:
 
-![Import CSS](https://i.imgur.com/YXrG9XO.png)
+![Embed CSS](https://i.imgur.com/YXrG9XO.png)
 
 I add the following code to style.css:
 
 ![style.css](https://i.imgur.com/nNvatFM.png)
+
+Embed index.js to index.html:
+
+![Embed JS](https://i.imgur.com/ujW7Lpp.png)
