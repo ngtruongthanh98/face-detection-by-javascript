@@ -49,3 +49,14 @@ Then, the website opened like this:
 
 ![Video stream](https://i.imgur.com/yunRge4.png)
 
+_______________________________________________
+
+Download package face-api.js from this repo: `https://github.com/justadudewhohacks/face-api.js/`
+
+Copy file face-api.min.js from folder dist into our project
+
+![face-api.min.js](https://i.imgur.com/iTpiHUn.png)
+
+For face detection, we need face detection model. In the face.api.js repo, there is a model for face detecion. We copy folder name weights to our project. Change its name to models.
+
+![Import the face detection models](https://i.imgur.com/acGjzLx.png)
