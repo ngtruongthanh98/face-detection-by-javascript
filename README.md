@@ -8,3 +8,7 @@ Create index.html, style.css, index.js
 Edit html file:
 
 ![index.html](https://i.imgur.com/5C4b1W4.png)
+
+Embed video from webcam to the website:
+
+![Video](https://i.imgur.com/rzOG5n1.png)
