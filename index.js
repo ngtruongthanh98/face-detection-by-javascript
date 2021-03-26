@@ -28,6 +28,9 @@ video.addEventListener('playing', () => {
         const detects = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions());
         
         const resizeDetects = faceapi.resizeResults(detects, displaySize);
+        
+        canvas.getContext('2d').clearRect(0, 0, displaySize.width, displaySize.height);
+        
         faceapi.draw.drawDetections(canvas, resizeDetects);
     }, 300);
 });

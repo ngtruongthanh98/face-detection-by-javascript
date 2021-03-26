@@ -174,5 +174,14 @@ video.addEventListener('playing', () => {
 
 ![Draw face detection](https://i.imgur.com/e2qlEs8.png)
 
+We must clear the old canvas befor creating the new one:
+
+```
+    canvas.getContext('2d').clearRect(0, 0, displaySize.width, displaySize.height);
+
+```
+
+![Clear canvas](https://i.imgur.com/7YL9gyQ.png)
+
 
 
