@@ -64,3 +64,21 @@ For face detection, we need face detection model. In the face.api.js repo, there
 Import face-api.min.js to index.html file. Remember that you should put face-api.min.js before index.js because the index.html load from top to bottom.
 
 ![Import face-api.min.js](https://i.imgur.com/z06X0Fu.png)
+
+___________________________________________________
+
+Come back to index.js:
+
+Create funnction getCameraStream() and put the get camera steam condition into it.
+
+```const video = document.getElementById("videoElm");
+
+function getCameraStream() {
+    if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: {} }).then((stream) => {
+            video.srcObject = stream;
+        });
+    }
+}
+
+getCameraStream();```
