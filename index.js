@@ -15,5 +15,15 @@ function getCameraStream() {
     }
 }
 
+video.addEventListener('playing', () => {
+    const canvas = faceapi.createCanvasFromMedia(video);
+    document.body.append(canvas);
+
+    setInterval(async() => {
+        const detects = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions());
+        console.log('detects', detects);
+    }, 300);
+});
+
 loadFaceAPI().then(getCameraStream);
 

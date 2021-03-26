@@ -111,3 +111,42 @@ loadFaceAPI().then(getCameraStream);
 ```
 
 After load face API function, we call function getCameraStream(). At this moment, we can load models face-api
+
+Add canvas to your your website:
+
+```
+video.addEventListener('playing', () => {
+    const canvas = faceapi.createCanvasFromMedia(video);
+    document.body.append(canvas);
+});
+```
+
+![Canvas](https://i.imgur.com/5cMzoyr.png) 
+
+We need to move the canvas to in front of the video, in style.css:
+```
+canvas {
+    position: absolute;
+}
+```
+
+![Move canvas to front](https://i.imgur.com/Xm71Qwy.png)
+
+setInterval() for loading the model after 300ms:
+
+```
+video.addEventListener('playing', () => {
+    const canvas = faceapi.createCanvasFromMedia(video);
+    document.body.append(canvas);
+
+    setInterval(async() => {
+        const detects = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions());
+        console.log('detects', detects);
+    }, 300);
+});
+```
+
+As you can see, the models can detect my face:
+
+![Face detection](https://i.imgur.com/qIVYFqi.png)
+
