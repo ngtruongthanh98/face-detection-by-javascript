@@ -81,4 +81,4 @@ function getCameraStream() {
     }
 }
 
-getCameraStream();```
+getCameraStream();
