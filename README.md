@@ -24,3 +24,28 @@ I add the following code to style.css:
 Embed index.js to index.html:
 
 ![Embed JS](https://i.imgur.com/ujW7Lpp.png)
+
+____________________________________________
+
+In index.js:
+
+I set an ID for the video, videoElm. I use getElementById and stored it to video.
+
+![video element](https://i.imgur.com/I2hfdYO.png)
+
+Get data from the browser, if the webcam does not open yet. require the user to allow the permission.
+
+![video permission](https://i.imgur.com/5CnbfMA.png)
+
+I load the video from webcam to the website:
+
+![Video loading](blob:https://imgur.com/2c46a718-e936-4d7c-a9eb-d21ae49aa081)
+
+You can you Live Server Extension in VsCode:
+
+![Live Server](https://i.imgur.com/pk6k5Xe.png)
+
+Then, the website opened like this:
+
+![Video stream](https://i.imgur.com/pk6k5Xe.png)
+
